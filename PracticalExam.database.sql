@@ -141,7 +141,7 @@ insert into Employee values ('EMP06', 'Thanh', 'Hoa', '2000-10-12', 1 , 'Ha Noi'
  create procedure sp_delDept(@empCode char(6))
  as 
  begin
-   if (select count (*) from Employee where Employee.Empcode = @empCode) > 0
+   if (select count (*) from Employee where Employee.EmpCode = @empCode) > 0
    begin
       delete from Employee
 	  where EmpCode = @empCode
