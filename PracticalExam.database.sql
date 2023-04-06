@@ -144,12 +144,13 @@ insert into Employee values ('EMP06', 'Thanh', 'Hoa', '2000-10-12', 1 , 'Ha Noi'
    if (select count (*) from Employee where Employee.EmpCode = @empCode) > 0
    begin
       delete from Employee
-	  where EmpCode = @empCode
+     where EmpCode = @empCode
+      print 'Delete employee complete!'
    end
    else
    begin
       print 'Dont find employee!';
-	  rollback transaction;
+      rollback transaction;
    end
 
 
