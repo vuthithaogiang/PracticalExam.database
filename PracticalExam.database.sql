@@ -88,10 +88,10 @@ insert into Employee values ('EMP06', 'Thanh', 'Hoa', '2000-10-12', 1 , 'Ha Noi'
 --5: Create an unique, none-clustered index named IX_DepartmentName
 -- on DepartName column on Department table [2 marks].
 
- create nonclustered index IX_DepartmentName
+ create unique nonclustered index IX_DepartmentName
  on Department(DepartName)
 
- --6 : Create a view to display employee’s code, full name and department name of all employees [3 marks].
+ --6 : Create a view to display employeeâ€™s code, full name and department name of all employees [3 marks].
 
  create view View_Employee
  as
