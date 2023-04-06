@@ -119,8 +119,8 @@ insert into Employee values ('EMP06', 'Thanh', 'Hoa', '2000-10-12', 1 , 'Ha Noi'
 			  e.Birthday,
 			  e.Gender,
 			  e.Salary
-	   from Department as d
-	   inner join Employee as e on e.DepartId = d.DepartId
+	   from Employee as e
+	   inner join Department as d on e.DepartId = d.DepartId
 	   where d.DepartId = @id
 
 	end
